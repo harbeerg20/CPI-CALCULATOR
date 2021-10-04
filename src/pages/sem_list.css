@@ -1,0 +1,14 @@
+.course_no_input{
+    width: 4%;
+}
+.course_no_text{
+    font-weight: bolder;
+    font-size: 2.5vh;
+    position: relative;
+    left: -2.5vh;
+}
+.nocourse{
+    padding: 1%;
+    position: relative;
+    left: 4vh;
+}

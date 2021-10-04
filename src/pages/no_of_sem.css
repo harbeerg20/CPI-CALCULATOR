@@ -1,0 +1,70 @@
+.title{
+    align-items: center;
+   text-align: center;
+    background-color:  rgb(72, 192, 223);
+}
+.Go_button{
+    padding: 10px;
+}
+.select_no_of_sems{
+    width: 80px;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+}
+.noofsems{
+   font-size: 3vh;
+   font-weight: bolder;
+   background-color: rgb(72, 192, 223);;
+}
+.no-of-course{
+    position: relative;
+    left: 40%;
+}
+.Go2{
+    width: 8vh;
+    height: 5vh;
+    position: relative;
+    left: 8%;
+    background-color: rgb(155, 228, 228);
+    border-radius: 1vh;
+    
+}
+.courseload{
+    position: relative;
+    left: 40%;
+    padding: 1%;
+}
+.yourcpi{
+    position: relative;
+    left: 85vh;
+    top: 2vh;
+    font-weight: bolder;
+    font-size: 4vh;
+    background-color: rgb(8, 5, 59);
+    width: max-content;
+    border-radius: 6vh;
+    /* padding-left: 5vh;
+    padding-right: 3vh; */
+    /* padding: 3.5vh; */
+    color: rgb(72, 192, 223);;
+}
+.Go3{
+    width: max-content;
+    height: 5vh;
+    position: relative;
+    left: 6%;
+    background-color: rgb(155, 228, 228);
+    border-radius: 1vh;
+    top: 2vh;
+}
+.semstext
+{
+ position: relative;
+ left: -40vh;
+ font-size: 4vh;
+}
+.yourcpitext{
+    padding: 2vh;
+}

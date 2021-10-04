@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { Layout } from 'antd';
+import React from "react";
+import No_of_sem from './pages/no_of_sem';
+import Sem_list from './pages/sem_list';
+
+
+const { Header, Content } = Layout;
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout className="layout">
+        <Header >
+          <h1 className="header">CPI CALCULATOR</h1>
+        </Header>
+        <Content className="content">
+          <No_of_sem/>
+          <div className="coursesps">
+            
+          </div>
+        </Content>
+        
+      </Layout>
     </div>
+
   );
 }
 
