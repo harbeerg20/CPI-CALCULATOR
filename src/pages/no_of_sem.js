@@ -73,7 +73,7 @@ class no_of_sem extends Component {
             for (var i = 0; i < this.state.sems; i++) {
                 temp[i] = []
                 for (var k = 0; k < this.state.ar1[i]; k++) {
-                    temp[i][k] = 0
+                    temp[i][k] = 10
                 }
 
             }
@@ -90,7 +90,7 @@ class no_of_sem extends Component {
             doit3=false
         }
         if(p===1){
-            temp[i1][i2]=e.target.value
+           temp[i1][i2] = e.target.value      
         }else{
             temp1[i1][i2]=e.target.value
         }
@@ -108,7 +108,7 @@ class no_of_sem extends Component {
     calculateCPI=()=>{
         for (var i = 0; i < this.state.sems; i++) {
             for (var k = 0; k < this.state.ar1[i]; k++) {
-                if(this.state.ar3[i][k]===12){
+                if (this.state.ar3[i][k] == 12 || this.state.ar3[i][k] == 13){
                     this.state.ar3[i][k] =0
                     this.state.ar4[i][k] =0
                 }

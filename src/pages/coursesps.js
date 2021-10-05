@@ -40,6 +40,7 @@ import "./coursesps.css"
                             <option value="2">E</option>
                             <option value="0">F</option>
                             <option value="12">Drop</option>
+                            <option value="13">S/X</option>
                         </select>
                     </label>
                     <label className="credit_weightage">
