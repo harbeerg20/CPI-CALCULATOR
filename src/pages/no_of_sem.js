@@ -29,6 +29,7 @@ class no_of_sem extends Component {
             sems: temp
         });
         this.renderCoursesps(temp)
+        this.loadcourseinput1(temp)
         
     }
     handleChange=(event,i)=>{
@@ -57,10 +58,28 @@ class no_of_sem extends Component {
        // this.state.ar.map((i) => <Sem_list values={i + 1} onChange={(e, i) => this.handleChange(e, i)} />)
         //console.log(this.state.ar)
     }
+    loadcourseinput1(e) {
+        let temp = []
+        // let temp1 = this.state.sems
+
+        for (var i = 0; i < e; i++) {
+            temp[i] = []
+            for (var k = 0; k < this.state.ar1[i]; k++) {
+                temp[i][k] = k
+            }
+
+        }
+        // console.log(temp)
+        // for(var j=1;j<=this.state.sems;j++){
+        //     temp1.push(j)
+        // }
+        this.setState({ ar2: temp })
+    }
     loadcourseinput(){
         let temp=[]
-        //let temp1=[]
-        for(var i=0;i<this.state.sems;i++){
+       // let temp1 = this.state.sems
+        
+        for (var i = 0; i < this.state.sems;i++){
             temp[i]=[]
             for(var k=0;k<this.state.ar1[i];k++){
                 temp[i][k]=k
