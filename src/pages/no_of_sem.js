@@ -13,41 +13,48 @@ class no_of_sem extends Component {
         super(props)
 
         this.state = {
-            sems: "1",
+            sems: "",
             ar:[0],
             ar1:[],
             ar2:[],
             ar3:[],
             ar4:[],
-            ar5:[]
+            ar5:[],
+           
         }
     }
     handleSemsChange = (event) => {
+        let temp=event.target.value
         this.setState({
-            sems: event.target.value
+            sems: temp
         });
+        this.renderCoursesps(temp)
+        
     }
     handleChange=(event,i)=>{
         let temp=this.state.ar1
         //let doit=true
         if(doit){
             for (let i = 0; i < this.state.sems; i++) {
-                temp.push(0);
+                temp.push(-1);
             }
             doit=false
         }
         temp[i-1]=event.target.value
         this.setState({ ar1: temp })
-        console.log(this.state.ar1)
+        this.loadcourseinput()
+       // console.log(this.state.ar1)
         // console.log(i)
         // console.log(event.target.value)
     }
-    renderCoursesps(){
+    renderCoursesps(sems){
         let temp = [];
-        for (let i = 0; i < this.state.sems; i++) {
+        for (let i = 0; i < sems; i++) {
             temp.push(i);
         }
         this.setState({ ar: temp })
+        // this.setState({var1:true})
+       // this.state.ar.map((i) => <Sem_list values={i + 1} onChange={(e, i) => this.handleChange(e, i)} />)
         //console.log(this.state.ar)
     }
     loadcourseinput(){
@@ -106,24 +113,34 @@ class no_of_sem extends Component {
     //     console.log(k)
     }
     calculateCPI=()=>{
-        for (var i = 0; i < this.state.sems; i++) {
-            for (var k = 0; k < this.state.ar1[i]; k++) {
-                if (this.state.ar3[i][k] == 12 || this.state.ar3[i][k] == 13){
-                    this.state.ar3[i][k] =0
-                    this.state.ar4[i][k] =0
-                }
-            }
-        }
+        // for (var i = 0; i < this.state.sems; i++) {
+        //     for (var k = 0; k < this.state.ar1[i]; k++) {
+        //         if (this.state.ar3[i][k] == 12 || this.state.ar3[i][k] == 13){
+        //             this.state.ar3[i][k] =0
+        //             this.state.ar4[i][k] =0
+        //         }
+        //     }
+        // }
         let num=0
         let denom=0
         for (var i = 0; i < this.state.sems; i++) {
             for (var k = 0; k < this.state.ar1[i]; k++) {
-                num += this.state.ar3[i][k] * this.state.ar4[i][k]
+                if (this.state.ar3[i][k] == 12 || this.state.ar3[i][k] == 13){
+                    num+=0
+                }else{
+                    num += this.state.ar3[i][k] * this.state.ar4[i][k]
+                }
+                
             }
         }
         for (var i = 0; i < this.state.sems; i++) {
             for (var k = 0; k < this.state.ar1[i]; k++) {
-                denom +=  1*this.state.ar4[i][k]
+                if (this.state.ar3[i][k] == 12 || this.state.ar3[i][k] == 13) {
+                    denom += 0
+                } else {
+                    denom += 1 * this.state.ar4[i][k]
+                }
+               
             }
         }
         let temp = []
@@ -134,7 +151,9 @@ class no_of_sem extends Component {
         this.setState({ar5:temp})
     }
     render() {
-    
+        const course=(arr)=><div>
+
+        </div>
         return (
             <div>
                 <form >
@@ -142,7 +161,7 @@ class no_of_sem extends Component {
                         <label >
                             <p className="noofsems">Number of Semesters:</p>
                         </label>
-                        <select className="select_no_of_sems" value={this.state.sems} onChange={this.handleSemsChange}>
+                        <select className="select_no_of_sems"   onChange={this.handleSemsChange}>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -152,23 +171,25 @@ class no_of_sem extends Component {
                             <option value="7">7</option>
                             <option value="8">8</option>
                         </select>
-                        <div className="Go_button">
+                        {/* <div className="Go_button">
                             <Button type="primary" onClick={()=>this.renderCoursesps()}>Go</Button>
-                        </div>
+                        </div> */}
                     </div>
                 </form>
                 <div className='no-of-course'>
-               {this.state.ar.map((i)=><Sem_list values={i+1}  onChange={(e,i)=>this.handleChange(e,i)}/>)}
-               <button className="Go2"
+                    {true? this.state.ar.map((i) => <Sem_list values={i + 1} onChange={(e, i) => this.handleChange(e, i)} />):""}
+               {/* {this.state.ar.map((i)=><Sem_list values={i+1}  onChange={(e,i)=>this.handleChange(e,i)}/>)} */}
+               {/* <button className="Go2"
                 onClick={()=>this.loadcourseinput()}
                >
                    Go
-               </button>
+               </button> */}
                 </div>
                 <div className="courseload">
                     
                     {this.state.ar2.map((arr,i1)=><div>
-                        <h2 className="semstext">Semester {i1+1}</h2>
+                        {arr[0] === 0 ? <h2 className="semstext">Semester {i1 + 1}</h2>:""}
+                        
                         {arr.map((ar,i2)=><Coursesps onChange={(e,p)=>this.handleChangeCourses(e,p,i1,i2)} />)}
                         </div>
                         

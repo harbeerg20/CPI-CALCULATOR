@@ -20,6 +20,11 @@ import "./coursesps.css"
     //          Credits:e.target.value
     //      })
     //  }
+    maxCheck=(object)=>{
+        if(object.target.values>object.target.max){
+            object.target.values = object.target.max
+        }
+    }
     render() {
         return (
             <div className="course1" >
@@ -45,7 +50,7 @@ import "./coursesps.css"
                     </label>
                     <label className="credit_weightage">
                         Credit weightage
-                        <input className="creditweightageinput" type="number" max="11" min="1"  onChange={(e) => this.props.onChange(e,2)}></input>
+                        <input className="creditweightageinput" type="number" max="11" min="1" onInput={this.maxCheck}  onChange={(e) => this.props.onChange(e,2)}></input>
                     </label>
                 </form>
             </div>
