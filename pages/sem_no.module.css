@@ -1,0 +1,51 @@
+.a{
+     background-color: white;
+      font-weight: bolder;
+       padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+         text-align: center;
+}
+.content{
+    background-color: rgb(72, 192, 223);
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    min-height:100vh;
+}
+.centre{
+    display: flex;
+     justify-content: center;
+      align-items: center;
+}
+.header{
+    background-color: blue;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.yourcpi{
+    font-weight: bolder;
+    font-size: 3rem;
+    background-color: slateblue;
+    border-radius: 3rem;
+    max-width: max-content;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+.semdiv{
+    background-color: darkcyan;
+    max-width: max-content;
+    position: relative;
+    left: 20rem;
+    /* padding-left: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem; */
+     padding-bottom: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}

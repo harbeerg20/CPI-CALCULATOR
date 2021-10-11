@@ -1,0 +1,22 @@
+.div{
+    background-color: rgb(75, 157, 168);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    width:max-content;
+    border-radius: 1vh;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.a{
+    background-color: white;
+     font-weight: bolder;
+    padding-right: 20px;
+     padding-left: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+}
