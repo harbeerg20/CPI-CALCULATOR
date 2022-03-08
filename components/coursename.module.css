@@ -1,0 +1,113 @@
+ .div{
+    /* background-color: rgb(157, 162, 165); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    width:max-content;
+    border-radius: 1vh;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.a{
+    /* background-color: white; */
+     font-weight: bolder;
+    padding-right: 20px;
+     padding-left: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+} 
+.h31{
+    padding-right:1rem;
+    padding-Left:1rem
+}
+.h32{
+     padding-right:1rem;
+    padding-Left:5rem
+}
+/* @media  (max-width:480px){
+.div{
+    background-color: rgb(75, 157, 168);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-right: 0.6rem;
+    width:max-content;
+    border-radius: 1vh;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    position: relative;
+    left: 0vh;
+}
+.a{
+    background-color: white;
+     font-weight: bolder;
+    padding-right: 20px;
+     padding-left: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+}
+}
+@media  (max-width:768px){
+    .div{
+    background-color: rgb(75, 157, 168);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    width:max-content;
+    border-radius: 1vh;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    position: relative;
+}
+.a{
+    background-color: white;
+     font-weight: bolder;
+    padding-right: 20px;
+     padding-left: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+} 
+}
+@media  (max-width:1024px){
+.div{
+    background-color: rgb(75, 157, 168);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    width:max-content;
+    border-radius: 1vh;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.a{
+    background-color: white;
+     font-weight: bolder;
+    padding-right: 20px;
+     padding-left: 20px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+} 
+.h31{
+    padding-right:'1rem';
+    padding-Left:'1rem'
+}
+.h32{
+     padding-right:'1rem';
+    padding-Left:'5rem'
+}
+} */
